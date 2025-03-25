@@ -245,6 +245,62 @@ const Collections = () => {
       imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
       category: "Accessories",
     },
+    {
+      id: "accessories-2",
+      title: "African Print Handbag",
+      description: "Vibrant kente print compact shoulder bag with adjustable strap",
+      imageUrl: "/lovable-uploads/a5ffd906-aa8b-441b-b9da-2798996c03e5.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-3",
+      title: "Traditional Print Swimwear",
+      description: "Two-piece kente print swimsuit with triangle top and high-waisted shorts",
+      imageUrl: "/lovable-uploads/46525042-ebe9-492e-8122-341ed6cdfbbe.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-4",
+      title: "Designer Print Mask",
+      description: "Coordinated face mask and shirt with geometric pattern prints",
+      imageUrl: "/lovable-uploads/f5cfdd34-9bae-49bf-a467-0103f5b45bd4.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-5",
+      title: "Crystal Evening Mask",
+      description: "Elegant crystal-embellished protective mask with matching formal wear",
+      imageUrl: "/lovable-uploads/1a4663c0-71b9-407d-bf62-7f490937b5ad.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-6",
+      title: "Ruby Statement Gown",
+      description: "Red embellished gown with pearl detailing and asymmetric hem",
+      imageUrl: "/lovable-uploads/2cdfad1a-34d0-4b13-8337-fb8c7d7cbc95.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-7",
+      title: "Golden Sunshine Dress",
+      description: "Vibrant yellow dress with matching gloves for formal garden events",
+      imageUrl: "/lovable-uploads/fc015271-2abb-4244-9de0-52fb2ddd3c5d.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-8",
+      title: "Royal White Ensemble",
+      description: "Off-shoulder white gown with metallic accessories and crown headpiece",
+      imageUrl: "/lovable-uploads/a886495d-861a-409f-8788-c3c281fc558c.png",
+      category: "Accessories",
+    },
+    {
+      id: "accessories-9",
+      title: "Urban Chic Combo",
+      description: "Stylish white top paired with vibrant patterned mini skirt and handbag",
+      imageUrl: "/lovable-uploads/36860a6b-aa15-45b8-9d98-6f3fe72cb8ec.png",
+      category: "Accessories",
+    },
   ];
 
   return (
@@ -268,4 +324,3 @@ const Collections = () => {
 };
 
 export default Collections;
-
