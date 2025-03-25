@@ -22,7 +22,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 pt-2">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/designs_by_derby/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -31,7 +31,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/designsbyderby" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -40,13 +40,26 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://www.tiktok.com/@designs_by_derby" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
-                aria-label="Twitter"
+                aria-label="TikTok"
               >
-                <Twitter size={20} />
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="lucide lucide-tiktok"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
               </a>
             </div>
           </div>

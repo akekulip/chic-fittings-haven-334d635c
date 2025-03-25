@@ -1,6 +1,6 @@
 
 import HeroSection from "@/components/HeroSection";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -65,17 +65,32 @@ const Contact = () => {
     {
       name: "Instagram",
       icon: <Instagram className="h-5 w-5" />,
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/designs_by_derby/",
     },
     {
       name: "Facebook",
       icon: <Facebook className="h-5 w-5" />,
-      url: "https://facebook.com",
+      url: "https://www.facebook.com/designsbyderby",
     },
     {
-      name: "Twitter",
-      icon: <Twitter className="h-5 w-5" />,
-      url: "https://twitter.com",
+      name: "TikTok",
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+          className="h-5 w-5"
+        >
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+        </svg>
+      ),
+      url: "https://www.tiktok.com/@designs_by_derby",
     },
   ];
 
