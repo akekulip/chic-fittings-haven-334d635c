@@ -18,21 +18,21 @@ const Index = () => {
       id: "bridal",
       title: "Bridal Collection",
       description: "Timeless elegance for your special day",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+      imageUrl: "/lovable-uploads/d4cadf05-d803-4e06-b9de-b9c208bd095a.png",
       category: "Bridal",
     },
     {
       id: "evening",
       title: "Evening Wear",
       description: "Sophisticated designs for memorable nights",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      imageUrl: "/lovable-uploads/402c8ba8-9df7-4374-9e51-25f71d107e55.png",
       category: "Evening",
     },
     {
       id: "custom",
       title: "Custom Designs",
       description: "Bespoke creations tailored to your vision",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      imageUrl: "/lovable-uploads/46492e91-7d6c-4080-9ec3-5a64f9322682.png",
       category: "Custom",
     },
   ];
@@ -138,7 +138,7 @@ const Index = () => {
             <div className="order-1 lg:order-2">
               <div className="relative aspect-square overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+                  src="/lovable-uploads/d4cadf05-d803-4e06-b9de-b9c208bd095a.png"
                   alt="Design By Derby Studio"
                   className="w-full h-full object-cover"
                 />

@@ -20,7 +20,7 @@ const HeroSection = ({
   subtitle,
   ctaText,
   ctaLink = "/collections",
-  backgroundImage = "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+  backgroundImage = "/lovable-uploads/17c52977-1b62-4434-bed6-befeffad36a8.png",
   overlay = true,
   centered = true,
   minHeight = "min-h-[80vh]",
