@@ -18,7 +18,7 @@ const Footer = () => {
             />
             <p className="text-gray-300 mt-4 max-w-sm">
               Luxury fashion design in Sunyani Accra, specializing in bespoke gowns, 
-              bridal wear, and high-end fashion pieces that celebrate elegance and individuality.
+              bridal wear, high-end fashion pieces, and adorable children's clothing that celebrate elegance and individuality.
             </p>
             <div className="flex space-x-4 pt-2">
               <a 
@@ -60,6 +60,9 @@ const Footer = () => {
               </NavLink>
               <NavLink to="/collections" className="text-gray-300 hover:text-white transition-colors">
                 Collections
+              </NavLink>
+              <NavLink to="/kids" className="text-gray-300 hover:text-white transition-colors">
+                Derby's Kids Avenue
               </NavLink>
               <NavLink to="/booking" className="text-gray-300 hover:text-white transition-colors">
                 Book Fitting
