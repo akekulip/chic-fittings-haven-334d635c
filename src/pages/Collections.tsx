@@ -6,16 +6,37 @@ const Collections = () => {
   const collections = [
     {
       id: "bridal-1",
-      title: "Ivory Dreams",
-      description: "A timeless bridal gown with intricate lace detailing",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+      title: "Elegance in White",
+      description: "A stunning bridal gown with delicate detailing",
+      imageUrl: "/lovable-uploads/7b4fa566-915f-49fa-a789-682508232654.png",
       category: "Bridal",
     },
     {
       id: "bridal-2",
-      title: "Floral Elegance",
-      description: "A romantic wedding dress with handcrafted floral embellishments",
+      title: "Classic Romance",
+      description: "Timeless bridal design with elegant silhouette",
       imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      category: "Bridal",
+    },
+    {
+      id: "bridal-3",
+      title: "Modern Sophistication",
+      description: "Contemporary bridal wear for the modern bride",
+      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+      category: "Bridal",
+    },
+    {
+      id: "bridal-4",
+      title: "Royal Wedding",
+      description: "Luxurious design fit for royalty",
+      imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      category: "Bridal",
+    },
+    {
+      id: "bridal-5",
+      title: "Dream Collection",
+      description: "Ethereal designs for your perfect day",
+      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
       category: "Bridal",
     },
     {
@@ -74,7 +95,7 @@ const Collections = () => {
       <HeroSection
         title="Our Collections"
         subtitle="Explore our carefully curated collections, each piece a testament to craftsmanship and timeless style."
-        backgroundImage="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+        backgroundImage="/lovable-uploads/7b4fa566-915f-49fa-a789-682508232654.png"
         minHeight="min-h-[60vh]"
       />
 
