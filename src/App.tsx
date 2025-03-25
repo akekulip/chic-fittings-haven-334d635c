@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Collections from "./pages/Collections";
+import CollectionDetail from "./pages/CollectionDetail";
 import Booking from "./pages/Booking";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/collections" element={<Collections />} />
+          <Route path="/collections/:id" element={<CollectionDetail />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
