@@ -52,7 +52,7 @@ const About = () => {
             <div>
               <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                  src="/lovable-uploads/d6572ab7-0338-4f5a-8e0b-a965df009249.png" 
                   alt="Designer Derby" 
                   className="w-full h-full object-cover"
                 />
