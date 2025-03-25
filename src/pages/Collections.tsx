@@ -60,22 +60,79 @@ const Collections = () => {
       imageUrl: "/lovable-uploads/76befe32-22eb-4360-8722-ce0e62f04767.png",
       category: "Bridal",
     },
-    // Previous bridal items removed and replaced with the 8 new ones above
     
+    // New Evening Collection Images
     {
       id: "evening-1",
-      title: "Midnight Glamour",
-      description: "A sophisticated evening gown with delicate beading",
-      imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      title: "Floral Evening Gown",
+      description: "Elegant strapless floral pattern gown with a perfect fit for evening events",
+      imageUrl: "/lovable-uploads/c794a08f-78a0-4b03-adc9-5dd779043702.png",
       category: "Evening",
     },
     {
       id: "evening-2",
-      title: "Scarlet Romance",
-      description: "A show-stopping red gown with dramatic silhouette",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+      title: "Golden Fringe Ensemble",
+      description: "Stunning gold fringed two-piece outfit with traditional embellishments",
+      imageUrl: "/lovable-uploads/644c58a6-2ed7-4637-8edd-dd3511e5409e.png",
       category: "Evening",
     },
+    {
+      id: "evening-3",
+      title: "Scarlet Shimmer",
+      description: "Luxurious red sequined mini dress with fringe details for glamorous nights",
+      imageUrl: "/lovable-uploads/b0d4c226-64be-402b-93fd-c59dc22932c0.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-4",
+      title: "Red Asymmetric Elegance",
+      description: "Sophisticated one-shoulder red dress with modern styling and clean lines",
+      imageUrl: "/lovable-uploads/7748dc81-0762-464e-843b-c1210890216b.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-5",
+      title: "Pink Rooftop Chic",
+      description: "Fashionable pink bodycon dress perfect for urban evening celebrations",
+      imageUrl: "/lovable-uploads/e8e8b45a-7085-48e5-ad4b-55c7dcb3758b.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-6",
+      title: "Waterfront Safari Suit",
+      description: "Stylish beige safari-inspired outfit with patterned blazer for evening events",
+      imageUrl: "/lovable-uploads/81346581-1c19-488f-839f-95b07506c706.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-7",
+      title: "Lavender Dream",
+      description: "Contemporary lavender two-piece outfit with matching jacket for statement evenings",
+      imageUrl: "/lovable-uploads/8743ac67-093f-464f-a6de-4239c808ad30.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-8",
+      title: "Midnight Sparkle Duo",
+      description: "Elegant black sequined evening dresses for sophisticated coordinated looks",
+      imageUrl: "/lovable-uploads/237f56cf-8c1a-4b18-a319-b78fb79d6b7d.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-9",
+      title: "Golden Lattice Top",
+      description: "Stylish halterneck gold patterned top paired with black pants for evening events",
+      imageUrl: "/lovable-uploads/05aff801-c2e5-4d04-b427-c710b17e772c.png",
+      category: "Evening",
+    },
+    {
+      id: "evening-10",
+      title: "Feathered Glamour",
+      description: "Statement-making mini dress with vibrant feather details and animal print",
+      imageUrl: "/lovable-uploads/ff8eae08-3cff-40d6-b6cf-e41b4f57062c.png",
+      category: "Evening",
+    },
+    
     {
       id: "custom-1",
       title: "Modern Minimalist",
@@ -118,7 +175,7 @@ const Collections = () => {
       imageUrl: "/lovable-uploads/5327c84b-723c-4652-a69e-d9f4117623fd.png",
       category: "Custom",
     },
-    // Ready-to-Wear collection with new uploads
+    // Ready-to-Wear collection
     {
       id: "ready-1",
       title: "Urban Chic",
