@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/components/ui/use-toast";
 
 interface CollectionCardProps {
   id: string;
@@ -20,6 +21,18 @@ const CollectionCard = ({
 }: CollectionCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const { toast } = useToast();
+
+  const handleImageError = () => {
+    console.error(`Failed to load image: ${imageUrl}`);
+    setImageError(true);
+    toast({
+      title: "Image loading error",
+      description: `Could not load image for: ${title}`,
+      variant: "destructive",
+    });
+  };
 
   return (
     <Link 
@@ -29,19 +42,26 @@ const CollectionCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="aspect-[4/5] w-full overflow-hidden bg-gray-100">
-        {!isImageLoaded && (
+        {!isImageLoaded && !imageError && (
           <div className="w-full h-full bg-gray-200 animate-pulse"></div>
         )}
-        <img
-          src={imageUrl}
-          alt={title}
-          className={cn(
-            "w-full h-full object-cover transition-transform duration-700 ease-out",
-            isHovered ? "scale-105" : "scale-100",
-            isImageLoaded ? "opacity-100" : "opacity-0"
-          )}
-          onLoad={() => setIsImageLoaded(true)}
-        />
+        {imageError ? (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
+            <span className="text-sm">Image unavailable</span>
+          </div>
+        ) : (
+          <img
+            src={imageUrl}
+            alt={title}
+            className={cn(
+              "w-full h-full object-cover transition-transform duration-700 ease-out",
+              isHovered ? "scale-105" : "scale-100",
+              isImageLoaded ? "opacity-100" : "opacity-0"
+            )}
+            onLoad={() => setIsImageLoaded(true)}
+            onError={handleImageError}
+          />
+        )}
       </div>
       
       <div 

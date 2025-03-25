@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import GalleryGrid from "@/components/GalleryGrid";
 
@@ -8,7 +7,7 @@ const Collections = () => {
       id: "bridal-1",
       title: "Elegance in White",
       description: "A stunning bridal gown with delicate detailing",
-      imageUrl: "/lovable-uploads/7b4fa566-915f-49fa-a789-682508232654.png",
+      imageUrl: "/lovable-uploads/IMG_1413.JPG",
       category: "Bridal",
     },
     {
@@ -186,7 +185,7 @@ const Collections = () => {
       <HeroSection
         title="Our Collections"
         subtitle="Explore our carefully curated collections, each piece a testament to craftsmanship and timeless style."
-        backgroundImage="/lovable-uploads/7b4fa566-915f-49fa-a789-682508232654.png"
+        backgroundImage="/lovable-uploads/IMG_1413.JPG"
         minHeight="min-h-[60vh]"
       />
 

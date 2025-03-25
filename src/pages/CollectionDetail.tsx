@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/components/ui/use-toast";
 
 interface Collection {
   id: string;
@@ -18,6 +19,7 @@ const CollectionDetail = () => {
   const [collection, setCollection] = useState<Collection | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     // In a real app, this would be an API call
@@ -33,16 +35,36 @@ const CollectionDetail = () => {
         
         if (found) {
           setCollection(found);
+        } else {
+          toast({
+            title: "Collection not found",
+            description: "The requested collection could not be found",
+            variant: "destructive",
+          });
         }
       } catch (error) {
         console.error("Error fetching collection:", error);
+        toast({
+          title: "Error loading collection",
+          description: "There was a problem loading the collection details",
+          variant: "destructive",
+        });
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchCollection();
-  }, [id]);
+  }, [id, toast]);
+
+  const handleImageError = () => {
+    console.error(`Failed to load image: ${collection?.imageUrl}`);
+    toast({
+      title: "Image loading error",
+      description: "The collection image could not be loaded",
+      variant: "destructive",
+    });
+  };
 
   if (isLoading) {
     return (
@@ -91,6 +113,7 @@ const CollectionDetail = () => {
               imageLoaded ? "opacity-100" : "opacity-0"
             )}
             onLoad={() => setImageLoaded(true)}
+            onError={handleImageError}
           />
         </div>
 
