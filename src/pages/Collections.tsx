@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import GalleryGrid from "@/components/GalleryGrid";
 
@@ -185,6 +186,7 @@ const Collections = () => {
       imageUrl: "/lovable-uploads/5327c84b-723c-4652-a69e-d9f4117623fd.png",
       category: "Custom",
     },
+    // Ready-to-Wear collection with new uploads
     {
       id: "ready-1",
       title: "Urban Chic",
@@ -197,6 +199,55 @@ const Collections = () => {
       title: "Weekend Retreat",
       description: "Comfortable yet stylish design for leisure time",
       imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-3",
+      title: "Vibrant Print Dress",
+      description: "Colorful paisley print dress with flared silhouette",
+      imageUrl: "/lovable-uploads/0e80dced-a4c5-4fbf-9ad8-944cea141080.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-4",
+      title: "Coastal Elegance",
+      description: "Flowing white halter dress perfect for beach getaways",
+      imageUrl: "/lovable-uploads/9bb61cf7-d6f5-4a65-bbdc-4546c5eeb00f.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-5",
+      title: "Coral Lace Ensemble",
+      description: "Sophisticated coral lace dress with bell sleeves",
+      imageUrl: "/lovable-uploads/347a5c1b-3599-416a-9885-a0d23a7189a0.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-6",
+      title: "Burgundy Traditional Set",
+      description: "Elegant burgundy outfit with traditional embroidery and matching headwrap",
+      imageUrl: "/lovable-uploads/9626a430-ad39-4d8d-a562-45637d1923f7.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-7",
+      title: "Heritage Collection",
+      description: "Rich burgundy ensemble featuring cultural patterns and symbols",
+      imageUrl: "/lovable-uploads/8486a654-40b0-4189-8f67-70c230f7ae38.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-8",
+      title: "Sunshine Top",
+      description: "Dramatic yellow ruffle top paired with a patterned mini skirt",
+      imageUrl: "/lovable-uploads/e764a0b5-b039-4f31-8551-ecf8414840ab.png",
+      category: "Ready-to-Wear",
+    },
+    {
+      id: "ready-9",
+      title: "Urban Tribal Mini",
+      description: "Yellow ruffle top with geometric print mini skirt, perfect for summer events",
+      imageUrl: "/lovable-uploads/77ecbc1d-f87e-414e-aaf4-86c68baaf7d6.png",
       category: "Ready-to-Wear",
     },
     {
