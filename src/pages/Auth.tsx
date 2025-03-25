@@ -1,17 +1,21 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Auth = () => {
   const { user, signIn, signUp } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [adminSetupComplete, setAdminSetupComplete] = useState(false);
+  const { toast } = useToast();
 
   // Redirect if user is already logged in
   if (user) {
@@ -30,6 +34,63 @@ const Auth = () => {
     setIsLoading(true);
     await signUp(email, password);
     setIsLoading(false);
+  };
+
+  // Special function to create and set up admin user
+  const createAdminUser = async () => {
+    try {
+      setIsLoading(true);
+      
+      // Try to sign up the admin user
+      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+        email: "admin@derby.com",
+        password: "admin"
+      });
+      
+      if (signUpError && signUpError.message !== "User already registered") {
+        throw signUpError;
+      }
+      
+      // If the user was created or already exists, try to sign in
+      const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+        email: "admin@derby.com",
+        password: "admin"
+      });
+      
+      if (signInError) {
+        throw signInError;
+      }
+
+      // Set the user as admin in the profiles table
+      if (signInData.user) {
+        const { error: updateError } = await supabase
+          .from('profiles')
+          .update({ is_admin: true })
+          .eq('id', signInData.user.id);
+        
+        if (updateError) {
+          throw updateError;
+        }
+        
+        toast({
+          title: "Admin user created successfully",
+          description: "Email: admin@derby.com, Password: admin",
+        });
+        
+        setAdminSetupComplete(true);
+        
+        // Sign out so the user can log in as admin
+        await supabase.auth.signOut();
+      }
+    } catch (error: any) {
+      toast({
+        title: "Error setting up admin user",
+        description: error.message,
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -74,6 +135,23 @@ const Auth = () => {
                 {isLoading ? "Logging in..." : "Login"}
               </Button>
             </form>
+
+            <div className="pt-4 border-t mt-4">
+              <p className="text-sm text-gray-500 mb-2">Quick access for demo:</p>
+              <Button 
+                variant="outline" 
+                className="w-full"
+                onClick={createAdminUser}
+                disabled={isLoading || adminSetupComplete}
+              >
+                {isLoading ? "Setting up..." : adminSetupComplete ? "Admin user ready" : "Create admin@derby.com"}
+              </Button>
+              {adminSetupComplete && (
+                <p className="text-xs text-green-600 mt-2">
+                  Admin user created! Use admin@derby.com / admin to log in
+                </p>
+              )}
+            </div>
           </TabsContent>
           
           <TabsContent value="signup" className="space-y-4 mt-4">
