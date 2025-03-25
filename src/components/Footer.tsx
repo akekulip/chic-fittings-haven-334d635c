@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -96,19 +96,19 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={20} className="text-gray-300 flex-shrink-0 mt-1" />
                 <p className="text-gray-300">
-                  Design Studio, Sunyani Accra, Ghana
+                  Oti first gate, Sunyani, Ghana
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-gray-300" />
-                <a href="tel:+233000000000" className="text-gray-300 hover:text-white transition-colors">
-                  +233 00 000 0000
+                <a href="tel:+233240360092" className="text-gray-300 hover:text-white transition-colors">
+                  +233 24 036 0092
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-gray-300" />
-                <a href="mailto:contact@designsbyderby.com" className="text-gray-300 hover:text-white transition-colors">
-                  contact@designsbyderby.com
+                <a href="mailto:designsbyderby022@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                  designsbyderby022@gmail.com
                 </a>
               </div>
             </div>

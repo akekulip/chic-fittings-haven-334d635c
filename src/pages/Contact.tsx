@@ -42,17 +42,17 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
-      details: ["Design Studio", "Sunyani Accra, Ghana"],
+      details: ["Oti first gate", "Sunyani, Ghana"],
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
-      details: ["+233 00 000 0000"],
+      details: ["+233 24 036 0092"],
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
-      details: ["contact@designsbyderby.com"],
+      details: ["designsbyderby022@gmail.com"],
     },
     {
       icon: <Clock className="h-6 w-6" />,
