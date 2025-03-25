@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import GalleryGrid from "@/components/GalleryGrid";
 
@@ -253,7 +252,7 @@ const Collections = () => {
       <HeroSection
         title="Our Collections"
         subtitle="Explore our carefully curated collections, each piece a testament to craftsmanship and timeless style."
-        backgroundImage="/lovable-uploads/3250f859-766b-4436-a7d5-0c81cba8db65.png"
+        backgroundImage="/lovable-uploads/8cf8ac07-701f-43a8-a009-4710b938538f.png"
         minHeight="min-h-[60vh]"
       />
 
@@ -269,3 +268,4 @@ const Collections = () => {
 };
 
 export default Collections;
+
