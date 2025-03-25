@@ -42,7 +42,7 @@ const Auth = () => {
       setIsLoading(true);
       
       // Create admin with username "admin"
-      const adminEmail = "admin@derby.app";
+      const adminEmail = "admin@derby.com";
       
       // Try to sign up the admin user
       const { data: signUpData, error: signUpError } = await supabase.auth.signUp({

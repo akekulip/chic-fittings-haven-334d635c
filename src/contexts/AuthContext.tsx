@@ -69,10 +69,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
   }, []);
 
-  // Convert username to email format for Supabase auth
+  // Convert username to a valid email format for Supabase auth
   const usernameToEmail = (username: string) => {
-    // Add fake domain to make it work with Supabase auth
-    return `${username}@derby.app`;
+    // Add a real domain to make it a valid email for Supabase auth
+    return `${username}@derby.com`;
   };
 
   const signIn = async (username: string, password: string) => {
