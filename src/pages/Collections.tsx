@@ -60,7 +60,6 @@ const Collections = () => {
       category: "Bridal",
     },
     
-    // New Evening Collection Images
     {
       id: "evening-1",
       title: "Floral Evening Gown",
@@ -133,20 +132,6 @@ const Collections = () => {
     },
     
     {
-      id: "custom-1",
-      title: "Modern Minimalist",
-      description: "A clean, contemporary design with architectural elements",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      category: "Custom",
-    },
-    {
-      id: "custom-2",
-      title: "Vintage Revival",
-      description: "A bespoke piece inspired by classic 1950s aesthetics",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-      category: "Custom",
-    },
-    {
       id: "custom-3",
       title: "Matching Couple Designs",
       description: "Elegant matching outfits for couples with floral patterns",
@@ -174,7 +159,6 @@ const Collections = () => {
       imageUrl: "/lovable-uploads/5327c84b-723c-4652-a69e-d9f4117623fd.png",
       category: "Custom",
     },
-    // Ready-to-Wear collection
     {
       id: "ready-1",
       title: "Urban Chic",
