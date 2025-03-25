@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroSectionProps {
   title: string;
@@ -26,6 +27,7 @@ const HeroSection = ({
   minHeight = "min-h-[80vh]",
 }: HeroSectionProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -62,13 +64,13 @@ const HeroSection = ({
       <div className="container relative z-20 px-4 md:px-6 mx-auto">
         <div 
           className={cn(
-            "max-w-3xl space-y-6",
+            "max-w-3xl space-y-4 md:space-y-6",
             centered ? "text-center mx-auto" : "text-left"
           )}
         >
           <h1 
             className={cn(
-              "text-4xl md:text-5xl lg:text-6xl font-semibold text-white hero-text-shadow",
+              "text-3xl md:text-5xl lg:text-6xl font-semibold text-white hero-text-shadow",
               isLoaded ? "animate-slide-down" : "opacity-0"
             )}
           >
@@ -78,7 +80,7 @@ const HeroSection = ({
           {subtitle && (
             <p 
               className={cn(
-                "text-lg md:text-xl text-white/90 text-balance leading-relaxed",
+                "text-base md:text-xl text-white/90 text-balance leading-relaxed px-2 md:px-0",
                 isLoaded ? "animate-fade-in" : "opacity-0",
                 "animation-delay-200"
               )}
@@ -97,7 +99,7 @@ const HeroSection = ({
             >
               <Link
                 to={ctaLink}
-                className="inline-flex items-center bg-white text-black px-6 py-3 rounded-none border border-transparent hover:bg-transparent hover:text-white hover:border-white transition-colors duration-300"
+                className="inline-flex items-center bg-white text-black px-5 py-2 md:px-6 md:py-3 rounded-none border border-transparent hover:bg-transparent hover:text-white hover:border-white transition-colors duration-300"
               >
                 <span>{ctaText}</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
