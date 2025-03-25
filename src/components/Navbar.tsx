@@ -54,7 +54,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-xl md:text-2xl font-bold font-display">
-          Chic Fittings Haven
+          Design By Derby
         </Link>
 
         {isMobile ? (
