@@ -15,21 +15,21 @@ const Index = () => {
 
   const featuredCollections = [
     {
-      id: "bridal",
+      id: "bridal-1", // Updated to match the collection ID in Collections.tsx
       title: "Bridal Collection",
       description: "Timeless elegance for your special day",
       imageUrl: "/lovable-uploads/d4cadf05-d803-4e06-b9de-b9c208bd095a.png",
       category: "Bridal",
     },
     {
-      id: "evening",
+      id: "evening-1", // Updated to match the collection ID in Collections.tsx
       title: "Evening Wear",
       description: "Sophisticated designs for memorable nights",
       imageUrl: "/lovable-uploads/402c8ba8-9df7-4374-9e51-25f71d107e55.png",
       category: "Evening",
     },
     {
-      id: "custom",
+      id: "custom-3", // Updated to match the collection ID in Collections.tsx
       title: "Custom Designs",
       description: "Bespoke creations tailored to your vision",
       imageUrl: "/lovable-uploads/46492e91-7d6c-4080-9ec3-5a64f9322682.png",
