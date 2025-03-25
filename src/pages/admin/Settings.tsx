@@ -88,6 +88,10 @@ const Settings = () => {
               <p className="font-medium text-gray-500">Storage Status</p>
               <p className="text-green-600">Available</p>
             </div>
+            <div>
+              <p className="font-medium text-gray-500">Business Name</p>
+              <p>Design By Derby</p>
+            </div>
           </div>
         </CardContent>
       </Card>

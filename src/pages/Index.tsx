@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -17,21 +16,21 @@ const Index = () => {
 
   const featuredCollections = [
     {
-      id: "bridal-1", // Updated to match the collection ID in Collections.tsx
+      id: "bridal-1",
       title: "Bridal Collection",
       description: "Timeless elegance for your special day",
       imageUrl: "/lovable-uploads/d4cadf05-d803-4e06-b9de-b9c208bd095a.png",
       category: "Bridal",
     },
     {
-      id: "evening-1", // Updated to match the collection ID in Collections.tsx
+      id: "evening-1",
       title: "Evening Wear",
       description: "Sophisticated designs for memorable nights",
       imageUrl: "/lovable-uploads/402c8ba8-9df7-4374-9e51-25f71d107e55.png",
       category: "Evening",
     },
     {
-      id: "custom-3", // Updated to match the collection ID in Collections.tsx
+      id: "custom-3",
       title: "Custom Designs",
       description: "Bespoke creations tailored to your vision",
       imageUrl: "/lovable-uploads/46492e91-7d6c-4080-9ec3-5a64f9322682.png",
@@ -72,7 +71,6 @@ const Index = () => {
         minHeight={isMobile ? "min-h-[60vh]" : "min-h-[80vh]"}
       />
 
-      {/* Featured Collections */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
@@ -118,7 +116,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -151,7 +148,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
@@ -187,7 +183,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
@@ -219,7 +214,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-black text-white py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-medium mb-4 md:mb-6">Ready to Create Your Perfect Look?</h2>

@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="divider mt-12 mb-6 mx-0 w-full bg-white/10"></div>
 
         <div className="text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} Designs By Derby. All rights reserved.</p>
+          <p>&copy; {currentYear} Design By Derby. All rights reserved.</p>
         </div>
       </div>
     </footer>
