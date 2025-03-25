@@ -9,8 +9,8 @@ type AuthContextType = {
   user: User | null;
   isAdmin: boolean;
   isLoading: boolean;
-  signIn: (email: string, password: string) => Promise<void>;
-  signUp: (email: string, password: string) => Promise<void>;
+  signIn: (username: string, password: string) => Promise<void>;
+  signUp: (username: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
 };
 
@@ -69,8 +69,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
   }, []);
 
-  const signIn = async (email: string, password: string) => {
+  // Convert username to email format for Supabase auth
+  const usernameToEmail = (username: string) => {
+    // Add fake domain to make it work with Supabase auth
+    return `${username}@derby.app`;
+  };
+
+  const signIn = async (username: string, password: string) => {
     try {
+      const email = usernameToEmail(username);
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -92,11 +99,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  const signUp = async (email: string, password: string) => {
+  const signUp = async (username: string, password: string) => {
     try {
+      const email = usernameToEmail(username);
+      
       const { error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          // Skip email verification
+          emailRedirectTo: undefined,
+          data: {
+            username,
+          }
+        }
       });
 
       if (error) {
@@ -108,7 +124,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       } else {
         toast({
           title: "Sign up successful",
-          description: "Please check your email for a confirmation link.",
+          description: "You can now log in with your username and password.",
         });
       }
     } catch (error: any) {

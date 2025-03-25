@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const Auth = () => {
   const { user, signIn, signUp } = useAuth();
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [adminSetupComplete, setAdminSetupComplete] = useState(false);
@@ -25,14 +25,14 @@ const Auth = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await signIn(email, password);
+    await signIn(username, password);
     setIsLoading(false);
   };
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await signUp(email, password);
+    await signUp(username, password);
     setIsLoading(false);
   };
 
@@ -41,10 +41,19 @@ const Auth = () => {
     try {
       setIsLoading(true);
       
+      // Create admin with username "admin"
+      const adminEmail = "admin@derby.app";
+      
       // Try to sign up the admin user
       const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-        email: "admin@derby.com",
-        password: "admin"
+        email: adminEmail,
+        password: "admin",
+        options: {
+          emailRedirectTo: undefined,
+          data: {
+            username: "admin"
+          }
+        }
       });
       
       if (signUpError && signUpError.message !== "User already registered") {
@@ -53,7 +62,7 @@ const Auth = () => {
       
       // If the user was created or already exists, try to sign in
       const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
-        email: "admin@derby.com",
+        email: adminEmail,
         password: "admin"
       });
       
@@ -74,7 +83,7 @@ const Auth = () => {
         
         toast({
           title: "Admin user created successfully",
-          description: "Email: admin@derby.com, Password: admin",
+          description: "Username: admin, Password: admin",
         });
         
         setAdminSetupComplete(true);
@@ -110,13 +119,13 @@ const Auth = () => {
           <TabsContent value="login" className="space-y-4 mt-4">
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="username">Username</Label>
                 <Input
-                  id="email"
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   required
                 />
               </div>
@@ -144,11 +153,11 @@ const Auth = () => {
                 onClick={createAdminUser}
                 disabled={isLoading || adminSetupComplete}
               >
-                {isLoading ? "Setting up..." : adminSetupComplete ? "Admin user ready" : "Create admin@derby.com"}
+                {isLoading ? "Setting up..." : adminSetupComplete ? "Admin user ready" : "Create admin user"}
               </Button>
               {adminSetupComplete && (
                 <p className="text-xs text-green-600 mt-2">
-                  Admin user created! Use admin@derby.com / admin to log in
+                  Admin user created! Use username: admin / password: admin to log in
                 </p>
               )}
             </div>
@@ -157,13 +166,13 @@ const Auth = () => {
           <TabsContent value="signup" className="space-y-4 mt-4">
             <form onSubmit={handleSignup} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="signup-email">Email</Label>
+                <Label htmlFor="signup-username">Username</Label>
                 <Input
-                  id="signup-email"
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  id="signup-username"
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   required
                 />
               </div>
