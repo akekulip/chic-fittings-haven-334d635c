@@ -1,4 +1,3 @@
-
 import { Baby, Star, Heart, Gift } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import GalleryGrid from "@/components/GalleryGrid";
@@ -6,49 +5,49 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Kids = () => {
-  // Sample kids collection data
+  // Updated kids collection data with new images
   const kidsCollections = [
     {
       id: "kids-1",
       title: "Playful Elegance",
       description: "Comfortable yet stylish outfits perfect for special occasions",
-      imageUrl: "/lovable-uploads/9bb61cf7-d6f5-4a65-bbdc-4546c5eeb00f.png",
+      imageUrl: "/lovable-uploads/35b38ccf-9e62-47a5-9050-743a89307fc0.png",
       category: "Formal",
     },
     {
       id: "kids-2",
       title: "Casual Comfort",
       description: "Everyday wear that combines comfort and durability",
-      imageUrl: "/lovable-uploads/76befe32-22eb-4360-8722-ce0e62f04767.png",
+      imageUrl: "/lovable-uploads/08ac0f91-cfd8-4192-a2bf-0dc1f28964c0.png",
       category: "Casual",
     },
     {
       id: "kids-3",
       title: "Celebration Attire",
       description: "Beautiful designs for birthdays and celebrations",
-      imageUrl: "/lovable-uploads/e764a0b5-b039-4f31-8551-ecf8414840ab.png",
+      imageUrl: "/lovable-uploads/acd35a00-3e31-468c-91e5-4d83500cb8da.png",
       category: "Party",
     },
     {
       id: "kids-4",
-      title: "Traditional Touch",
-      description: "Cultural designs with modern comfort for little ones",
-      imageUrl: "/lovable-uploads/8cf8ac07-701f-43a8-a009-4710b938538f.png",
-      category: "Traditional",
+      title: "Family Match",
+      description: "Coordinated outfits for the whole family",
+      imageUrl: "/lovable-uploads/79bdceac-085a-4dc2-b961-4a47ec1afde1.png",
+      category: "Family",
     },
     {
       id: "kids-5",
       title: "School Style",
       description: "Durable and comfortable uniforms and school attire",
-      imageUrl: "/lovable-uploads/e8e8b45a-7085-48e5-ad4b-55c7dcb3758b.png",
+      imageUrl: "/lovable-uploads/acd35a00-3e31-468c-91e5-4d83500cb8da.png",
       category: "School",
     },
     {
       id: "kids-6",
-      title: "Family Match",
-      description: "Coordinated outfits for the whole family",
-      imageUrl: "/lovable-uploads/a886495d-861a-409f-8788-c3c281fc558c.png",
-      category: "Family",
+      title: "Traditional Touch",
+      description: "Cultural designs with modern comfort for little ones",
+      imageUrl: "/lovable-uploads/35b38ccf-9e62-47a5-9050-743a89307fc0.png",
+      category: "Traditional",
     },
   ];
 
